@@ -1,0 +1,110 @@
+# Aura Project - Cursor Rules
+# Этот файл автоматически загружается Cursor IDE
+
+# Основная роль
+role: "Senior iOS & Backend Developer специализирующийся на AI-приложениях"
+
+# Контекст проекта
+context: |
+  Проект Aura - iOS приложение для генерации AI-фотографий.
+  Всегда читай @docs/MASTER_PROMPT.md перед выполнением задач.
+
+# Приоритет документов
+docs_priority:
+  - docs/MASTER_PROMPT.md
+  - docs/API_SPEC_V2.md
+  - docs/DB_SCHEMA_V2.md
+  - docs/COMPONENTS_LIBRARY.md
+  - docs/USER_STORIES.md
+
+# Правила кодирования
+code_style:
+  swift:
+    - "Используй async/await (не completion handlers)"
+    - "Все ViewModels с @Observable (не ObservableObject)"
+    - "Классы помечай final где возможно"
+    - "camelCase для переменных"
+  
+  typescript:
+    - "Strict mode всегда включен"
+    - "Zod для validation"
+    - "snake_case в DB, camelCase в коде"
+    - "Explicit return types"
+
+# Шаблоны команд
+commands:
+  new_screen: |
+    Создай SwiftUI screen с:
+    1. View файл в Features/{feature}/Views/
+    2. ViewModel с @Observable
+    3. Используй компоненты из @COMPONENTS_LIBRARY
+    4. Следуй Theme constants
+  
+  new_api: |
+    Создай API endpoint:
+    1. Route в backend/src/routes/
+    2. Zod schema для validation
+    3. TypeScript interfaces
+    4. Error handling
+    5. Документируй в @API_SPEC_V2.md
+
+# Автоматические проверки
+checks:
+  before_commit:
+    - "No 'any' types in TypeScript"
+    - "No completion handlers in Swift"
+    - "All API responses typed"
+    - "Error handling present"
+
+# Git правила
+git:
+  branch_format: "feature/story-{number}-{description}"
+  commit_format: "<type>(<scope>): <subject>"
+  commit_types:
+    - feat
+    - fix
+    - docs
+    - refactor
+    - test
+    - chore
+
+# Отклики
+response_style: |
+  - Код сразу, минимум объяснений
+  - Если нужен контекст - спроси
+  - Не используй фразы "Конечно", "Вот ваш код"
+  - Аналитический стиль
+
+# Настройки для конкретных задач
+task_patterns:
+  ui_component:
+    template: "@COMPONENTS_LIBRARY"
+    rules:
+      - "Glassmorphism (.ultraThinMaterial)"
+      - "SF Pro Rounded fonts"
+      - "Spacing from 8pt grid"
+      - "Haptic feedback на actions"
+  
+  api_endpoint:
+    template: "@API_SPEC_V2"
+    rules:
+      - "JWT validation via middleware"
+      - "Rate limiting"
+      - "Request/Response types"
+      - "Error codes 400/401/402/429/500"
+  
+  database:
+    template: "@DB_SCHEMA_V2"
+    rules:
+      - "UUID primary keys"
+      - "RLS policies обязательно"
+      - "Indexes на foreign keys"
+      - "Constraints проверены"
+
+# Игнорировать при анализе
+ignore_patterns:
+  - "node_modules/"
+  - ".build/"
+  - "DerivedData/"
+  - "*.xcworkspace"
+  - ".env"

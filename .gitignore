@@ -1,0 +1,36 @@
+# Node / Bun
+node_modules/
+.env
+.env.local
+.env.*.local
+*.log
+dist/
+
+# Xcode
+*.xcworkspace
+*.xcuserstate
+DerivedData/
+.build/
+*.ipa
+*.dSYM.zip
+
+# Swift Package Manager
+.swiftpm/
+Package.resolved
+
+# Supabase
+.supabase/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
+
+# Secrets
+*.pem
+*.key
+Config.xcconfig
