@@ -42,13 +42,10 @@ app.route('/webhooks', webhooksRoutes);
 
 app.onError(errorMiddleware);
 
-export default app;
+const port = parseInt(process.env.PORT ?? '3000', 10);
 
-if (import.meta.main) {
-  const port = parseInt(process.env.PORT ?? '3000', 10);
-  console.log(`Aura API running on http://localhost:${port}`);
-  Bun.serve({
-    fetch: app.fetch,
-    port,
-  });
-}
+export default {
+  fetch: app.fetch,
+  port,
+  hostname: '0.0.0.0',
+};
