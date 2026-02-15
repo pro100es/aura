@@ -8,13 +8,13 @@ struct AuthView: View {
             Spacer()
             Image(systemName: "person.crop.circle.fill")
                 .font(.system(size: 80))
-                .foregroundStyle(.auraAccent)
+                .foregroundStyle(Color.auraAccent)
             Text("Войдите в аккаунт")
                 .font(.auraTitle)
-                .foregroundStyle(.auraTextPrimary)
+                .foregroundStyle(Color.auraTextPrimary)
             Text("Необходима авторизация для генерации фото")
                 .font(.auraBody)
-                .foregroundStyle(.auraTextSecondary)
+                .foregroundStyle(Color.auraTextSecondary)
                 .multilineTextAlignment(.center)
             Spacer()
             VStack(spacing: Spacing.md) {
@@ -29,14 +29,14 @@ struct AuthView: View {
                 .cornerRadius(CornerRadius.button)
                 Text("Добавь Supabase Auth для входа")
                     .font(.auraCaption)
-                    .foregroundStyle(.auraTextSecondary)
+                    .foregroundStyle(Color.auraTextSecondary)
                 #if DEBUG
                 Button("Skip (только UI, API вернёт 401)") {
                     AuthManager.shared.setToken("dev-skip")
                     onAuthenticated()
                 }
                 .font(.auraCaption)
-                .foregroundStyle(.auraTextSecondary)
+                .foregroundStyle(Color.auraTextSecondary)
                 #endif
             }
             .padding(.horizontal, Spacing.lg)

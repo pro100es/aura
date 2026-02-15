@@ -33,7 +33,7 @@ struct PresetGalleryView: View {
     private var loadingView: some View {
         VStack {
             Spacer()
-            ProgressView().tint(.auraAccent).scaleEffect(1.2)
+            ProgressView().tint(Color.auraAccent).scaleEffect(1.2)
             Spacer()
         }
     }

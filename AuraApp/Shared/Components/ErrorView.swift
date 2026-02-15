@@ -17,11 +17,11 @@ struct ErrorView: View {
 
             Text("Что-то пошло не так")
                 .font(.auraHeadline)
-                .foregroundStyle(.auraTextPrimary)
+                .foregroundStyle(Color.auraTextPrimary)
 
             Text(error.localizedDescription)
                 .font(.auraCaption)
-                .foregroundStyle(.auraTextSecondary)
+                .foregroundStyle(Color.auraTextSecondary)
                 .multilineTextAlignment(.center)
 
             if let retryAction {

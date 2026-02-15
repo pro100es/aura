@@ -7,7 +7,7 @@ struct ProfileView: View {
                 Section {
                     Text("Профиль")
                         .font(.auraHeadline)
-                        .foregroundStyle(.auraTextPrimary)
+                        .foregroundStyle(Color.auraTextPrimary)
                 }
                 Section("Настройки") {
                     NavigationLink("Галерея") { GalleryView() }

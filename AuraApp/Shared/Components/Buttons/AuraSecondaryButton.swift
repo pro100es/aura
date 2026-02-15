@@ -19,7 +19,7 @@ struct AuraSecondaryButton: View {
                 }
                 Text(title).font(.auraCallout)
             }
-            .foregroundStyle(.auraTextPrimary)
+            .foregroundStyle(Color.auraTextPrimary)
             .padding(.horizontal, Spacing.lg)
             .padding(.vertical, Spacing.md)
             .background(.ultraThinMaterial)

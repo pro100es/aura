@@ -22,7 +22,7 @@ struct ResultsCarouselView: View {
                 } else {
                     Text("Нет результатов")
                         .font(.auraBody)
-                        .foregroundStyle(.auraTextSecondary)
+                        .foregroundStyle(Color.auraTextSecondary)
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
 
@@ -36,7 +36,7 @@ struct ResultsCarouselView: View {
                     Button("Готово") {
                         onDismiss()
                     }
-                    .foregroundStyle(.auraAccent)
+                    .foregroundStyle(Color.auraAccent)
                 }
             }
         }
@@ -77,13 +77,13 @@ struct ResultsCarouselView: View {
                     Label("Сохранить", systemImage: "square.and.arrow.down")
                         .font(.auraCallout)
                 }
-                .foregroundStyle(.auraTextPrimary)
+                .foregroundStyle(Color.auraTextPrimary)
 
                 ShareLink(item: url) {
                     Label("Поделиться", systemImage: "square.and.arrow.up")
                         .font(.auraCallout)
                 }
-                .foregroundStyle(.auraTextPrimary)
+                .foregroundStyle(Color.auraTextPrimary)
             }
 
             Spacer()

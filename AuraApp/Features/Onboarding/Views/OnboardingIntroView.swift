@@ -28,7 +28,7 @@ struct OnboardingIntroView: View {
                 onComplete()
             }
             .font(.auraCallout)
-            .foregroundStyle(.auraTextSecondary)
+            .foregroundStyle(Color.auraTextSecondary)
             .padding(Spacing.lg)
         }
         .onAppear {
@@ -49,13 +49,13 @@ struct OnboardingIntroView: View {
         VStack(spacing: Spacing.sm) {
             Image(systemName: "sparkles")
                 .font(.system(size: 80))
-                .foregroundStyle(.auraAccent)
+                .foregroundStyle(Color.auraAccent)
             Text("Ваш контент.")
                 .font(.auraTitle)
-                .foregroundStyle(.auraTextPrimary)
+                .foregroundStyle(Color.auraTextPrimary)
             Text("В любом месте. В любое время.")
                 .font(.auraTitle2)
-                .foregroundStyle(.auraTextSecondary)
+                .foregroundStyle(Color.auraTextSecondary)
         }
         .padding(.horizontal, Spacing.xl)
         .padding(.bottom, Spacing.xl)

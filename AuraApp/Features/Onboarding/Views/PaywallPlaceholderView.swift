@@ -12,11 +12,11 @@ struct PaywallPlaceholderView: View {
 
                 Text("Pro подписка")
                     .font(.auraTitle)
-                    .foregroundStyle(.auraTextPrimary)
+                    .foregroundStyle(Color.auraTextPrimary)
 
                 Text("Разблокируйте все пресеты и безлимитные генерации")
                     .font(.auraBody)
-                    .foregroundStyle(.auraTextSecondary)
+                    .foregroundStyle(Color.auraTextSecondary)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal)
 
@@ -32,7 +32,7 @@ struct PaywallPlaceholderView: View {
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Закрыть") { dismiss() }
-                        .foregroundStyle(.auraTextSecondary)
+                        .foregroundStyle(Color.auraTextSecondary)
                 }
             }
         }

@@ -17,8 +17,8 @@ struct GenerationProcessView: View {
                     Task { await poll() }
                 }
             } else {
-                ProgressView().tint(.auraAccent).scaleEffect(1.5)
-                Text("Загрузка...").font(.auraBody).foregroundStyle(.auraTextSecondary)
+                ProgressView().tint(Color.auraAccent).scaleEffect(1.5)
+                Text("Загрузка...").font(.auraBody).foregroundStyle(Color.auraTextSecondary)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -41,14 +41,14 @@ struct GenerationProcessView: View {
 
     private func statusView(_ s: GenerationStatus) -> some View {
         VStack(spacing: Spacing.lg) {
-            ProgressView().tint(.auraAccent).scaleEffect(1.5)
+            ProgressView().tint(Color.auraAccent).scaleEffect(1.5)
             Text(statusMessage(s.status))
                 .font(.auraHeadline)
-                .foregroundStyle(.auraTextPrimary)
+                .foregroundStyle(Color.auraTextPrimary)
                 .multilineTextAlignment(.center)
             Text("Обычно это занимает 20–30 секунд")
                 .font(.auraCaption)
-                .foregroundStyle(.auraTextSecondary)
+                .foregroundStyle(Color.auraTextSecondary)
         }
         .padding(Spacing.xl)
         .onChange(of: s.status) { _, newValue in

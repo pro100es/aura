@@ -33,7 +33,7 @@ struct GenerationOptionsView: View {
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Отмена") { onStart() }
-                        .foregroundStyle(.auraAccent)
+                        .foregroundStyle(Color.auraAccent)
                 }
             }
             .navigationDestination(item: $generationId) { id in
@@ -55,7 +55,7 @@ struct GenerationOptionsView: View {
             VStack(alignment: .leading, spacing: Spacing.sm) {
                 Text("Соотношение сторон")
                     .font(.auraCaption)
-                    .foregroundStyle(.auraTextSecondary)
+                    .foregroundStyle(Color.auraTextSecondary)
                 Picker("", selection: $aspectRatio) {
                     ForEach(AspectRatio.allCases, id: \.self) { ratio in
                         Text(ratio.rawValue).tag(ratio)
@@ -67,21 +67,21 @@ struct GenerationOptionsView: View {
             VStack(alignment: .leading, spacing: Spacing.sm) {
                 Text("Варианты (1–4)")
                     .font(.auraCaption)
-                    .foregroundStyle(.auraTextSecondary)
+                    .foregroundStyle(Color.auraTextSecondary)
                 Stepper(value: $batchSize, in: 1 ... 4) {
                     Text("\(batchSize)")
                         .font(.auraHeadline)
-                        .foregroundStyle(.auraTextPrimary)
+                        .foregroundStyle(Color.auraTextPrimary)
                 }
             }
 
             VStack(alignment: .leading, spacing: Spacing.sm) {
                 Text("Дополнительное описание (опционально)")
                     .font(.auraCaption)
-                    .foregroundStyle(.auraTextSecondary)
+                    .foregroundStyle(Color.auraTextSecondary)
                 TextField("Мягкий свет, тёплые тона...", text: $customPrompt, axis: .vertical)
                     .font(.auraBody)
-                    .foregroundStyle(.auraTextPrimary)
+                    .foregroundStyle(Color.auraTextPrimary)
                     .lineLimit(3 ... 6)
                     .padding(Spacing.md)
                     .background(Color.auraSurface)

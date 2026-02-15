@@ -9,10 +9,10 @@ struct ModeSelectionView: View {
             VStack(spacing: Spacing.sm) {
                 Text("Как будете использовать?")
                     .font(.auraTitle)
-                    .foregroundStyle(.auraTextPrimary)
+                    .foregroundStyle(Color.auraTextPrimary)
                 Text("Выберите основную цель")
                     .font(.auraBody)
-                    .foregroundStyle(.auraTextSecondary)
+                    .foregroundStyle(Color.auraTextSecondary)
             }
             .padding(.top, Spacing.xxl)
 
@@ -52,18 +52,18 @@ struct ModeCard: View {
             HStack(spacing: Spacing.lg) {
                 Image(systemName: mode.iconName)
                     .font(.system(size: 32))
-                    .foregroundStyle(isSelected ? .auraAccent : .auraTextSecondary)
+                    .foregroundStyle(isSelected ? Color.auraAccent : Color.auraTextSecondary)
                     .frame(width: 48, alignment: .center)
 
                 Text(mode.displayName)
                     .font(.auraHeadline)
-                    .foregroundStyle(.auraTextPrimary)
+                    .foregroundStyle(Color.auraTextPrimary)
 
                 Spacer()
 
                 if isSelected {
                     Image(systemName: "checkmark.circle.fill")
-                        .foregroundStyle(.auraAccent)
+                        .foregroundStyle(Color.auraAccent)
                 }
             }
             .padding(Spacing.lg)

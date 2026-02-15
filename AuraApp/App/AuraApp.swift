@@ -50,6 +50,6 @@ struct MainTabView: View {
                 .tabItem { Label("Профиль", systemImage: "person.fill") }
                 .tag(2)
         }
-        .tint(.auraAccent)
+        .tint(Color.auraAccent)
     }
 }

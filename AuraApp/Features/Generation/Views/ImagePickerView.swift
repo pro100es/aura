@@ -52,10 +52,10 @@ struct ImagePickerView: View {
                 VStack(spacing: Spacing.md) {
                     Image(systemName: "photo.on.rectangle.angled")
                         .font(.system(size: 60))
-                        .foregroundStyle(.auraAccent)
+                        .foregroundStyle(Color.auraAccent)
                     Text("Выбрать из галереи")
                         .font(.auraHeadline)
-                        .foregroundStyle(.auraTextPrimary)
+                        .foregroundStyle(Color.auraTextPrimary)
                 }
                 .frame(maxWidth: .infinity)
                 .frame(height: 160)
@@ -72,10 +72,10 @@ struct ImagePickerView: View {
                 VStack(spacing: Spacing.md) {
                     Image(systemName: "camera.fill")
                         .font(.system(size: 60))
-                        .foregroundStyle(.auraAccent)
+                        .foregroundStyle(Color.auraAccent)
                     Text("Сделать фото")
                         .font(.auraHeadline)
-                        .foregroundStyle(.auraTextPrimary)
+                        .foregroundStyle(Color.auraTextPrimary)
                 }
                 .frame(maxWidth: .infinity)
                 .frame(height: 160)
@@ -106,7 +106,7 @@ struct ImagePickerView: View {
                 selectedItem = nil
             }
             .font(.auraCallout)
-            .foregroundStyle(.auraTextSecondary)
+            .foregroundStyle(Color.auraTextSecondary)
         }
     }
 

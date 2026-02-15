@@ -49,7 +49,7 @@ struct PresetCard: View {
     private var textContent: some View {
         VStack(alignment: .leading, spacing: 4) {
             HStack {
-                Text(preset.name).font(.auraHeadline).foregroundStyle(.auraTextPrimary)
+                Text(preset.name).font(.auraHeadline).foregroundStyle(Color.auraTextPrimary)
                 Spacer()
                 if preset.isPremium {
                     Image(systemName: "crown.fill")
@@ -60,7 +60,7 @@ struct PresetCard: View {
             if let desc = preset.description {
                 Text(desc)
                     .font(.auraCaption)
-                    .foregroundStyle(.auraTextSecondary)
+                    .foregroundStyle(Color.auraTextSecondary)
                     .lineLimit(2)
                     .multilineTextAlignment(.leading)
             }
